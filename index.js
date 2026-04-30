@@ -61,22 +61,18 @@ const imgTest = document.querySelector("img")
 bookStore.books.forEach(h3 => {
     const bookTitle = document.createElement("h3")
     bookTitle.textContent = h3.title
-    bookTitle.id = 'bookTitle'
     h3Test.append(bookTitle)
-    document.getElementById('bookTitle')
 })
-
 bookStore.books.forEach(para => {
     const bookAuthor = document.createElement("p")
     bookAuthor.textContent = para.author
-    bookAuthor.id = 'bookAuthor'
     pTest.append(bookAuthor)
 
 })
 bookStore.books.forEach(IMG => {
     const bookIMG = document.createElement('img')
-    bookIMG.textContent = IMG.imageUrl
-    bookIMG.id = 'bookIMG'
-    document.getElementById('bookIMG').appendChild(bookIMG)
+    bookIMG.src = IMG.imageUrl
+    imgTest.append(bookIMG)
 
 })
+
